@@ -11,5 +11,4 @@ AppIcon derived from 'Muir: the Master Collection's browser icon.
 
 # License
 
-These works are available under the MIT license. See the [LICENSE][license] file
-for more info.
+These works are available under the MIT license. See the [license](LICENSE) file for more info.
