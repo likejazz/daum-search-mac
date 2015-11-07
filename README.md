@@ -1,6 +1,6 @@
 # Daum Search
 
-*Daum Search* is a very simple Mac App lets you find something very fast and conveniently.
+**Daum Search** is a very simple Mac App lets you find something very fast and conveniently.
 
 # App Icon
 
