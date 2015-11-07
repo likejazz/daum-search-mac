@@ -4,7 +4,7 @@
 
 # App Icon
 
-AppIcon derived from 'Muir: the Master Collection's browser icon.
+AppIcon derived from 'Muir: the Master Collection's browser icon.  
 <http://dewith.com/2015/muir-the-master-collection/>
 
 # License
