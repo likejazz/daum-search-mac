@@ -4,6 +4,10 @@
 
 <img src="https://raw.githubusercontent.com/likejazz/daum-search-mac-app/master/Screenshot.png" width="400" />
 
+# Usage
+
+Hit `CMD + L` to focus on search box for convenient use.
+
 # App Icon
 
 AppIcon derived from 'Muir: the Master Collection's browser icon for personal use only.  
