@@ -14,6 +14,7 @@
 
 @property (weak) IBOutlet WebView *webView;
 @property (weak) IBOutlet NSSearchField *searchField;
+@property (weak) IBOutlet NSButton *btnNew;
 
 - (IBAction)search:(id)sender;
 

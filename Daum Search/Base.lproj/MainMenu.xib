@@ -15,6 +15,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="btnNew" destination="v3G-Fs-OWn" id="Dom-mU-aqL"/>
                 <outlet property="searchField" destination="3e3-Gg-Jlj" id="AfJ-4p-Qm8"/>
                 <outlet property="webView" destination="7nh-VN-nV2" id="dWK-2E-vWa"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="8Fd-zE-LfT"/>
@@ -127,8 +128,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="460" height="790"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3e3-Gg-Jlj">
-                        <rect key="frame" x="120" y="757" width="220" height="22"/>
+                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="7nh-VN-nV2">
+                        <rect key="frame" x="0.0" y="0.0" width="460" height="747"/>
+                        <animations/>
+                        <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="16" minimumFontSize="0">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="frameLoadDelegate" destination="EiT-Mj-1SZ" id="KAm-ya-4Xp"/>
+                        </connections>
+                    </webView>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3e3-Gg-Jlj">
+                        <rect key="frame" x="91" y="755" width="220" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="220" id="svZ-kZ-3VH"/>
                         </constraints>
@@ -142,21 +153,21 @@
                             <action selector="search:" target="Voe-Tx-rLC" id="kbP-1h-7UB"/>
                         </connections>
                     </searchField>
-                    <webView translatesAutoresizingMaskIntoConstraints="NO" id="7nh-VN-nV2">
-                        <rect key="frame" x="0.0" y="0.0" width="460" height="747"/>
+                    <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3G-Fs-OWn">
+                        <rect key="frame" x="317" y="758" width="54" height="16"/>
                         <animations/>
-                        <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="16" minimumFontSize="0">
-                            <nil key="identifier"/>
-                        </webPreferences>
-                        <connections>
-                            <outlet property="frameLoadDelegate" destination="EiT-Mj-1SZ" id="KAm-ya-4Xp"/>
-                        </connections>
-                    </webView>
+                        <buttonCell key="cell" type="check" title="새 창" bezelStyle="regularSquare" imagePosition="left" inset="2" id="GIN-5b-8i3">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="v3G-Fs-OWn" firstAttribute="baseline" secondItem="3e3-Gg-Jlj" secondAttribute="baseline" id="4Of-86-TBm"/>
                     <constraint firstAttribute="trailing" secondItem="7nh-VN-nV2" secondAttribute="trailing" id="7cH-Ah-WOc"/>
                     <constraint firstAttribute="bottom" secondItem="7nh-VN-nV2" secondAttribute="bottom" id="CzO-ck-sbm"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Jpb-rt-dUF"/>
+                    <constraint firstItem="v3G-Fs-OWn" firstAttribute="leading" secondItem="3e3-Gg-Jlj" secondAttribute="trailing" constant="8" symbolic="YES" id="cPf-cS-jgr"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="top" secondItem="3e3-Gg-Jlj" secondAttribute="bottom" constant="10" id="l5f-a4-UVH"/>
                     <constraint firstItem="3e3-Gg-Jlj" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="11" id="wIw-DA-EYS"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="centerX" secondItem="3e3-Gg-Jlj" secondAttribute="centerX" id="xbo-ta-xZB"/>

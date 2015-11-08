@@ -57,9 +57,9 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
     [[[self webView] mainFrame] loadRequest:urlRequest];
 
     // For change the text on the window.title
-    [[self webView] setFrameLoadDelegate:self];
+    [_webView setFrameLoadDelegate:self];
     // For open URL in OS' default browser
-//    [[self webView] setPolicyDelegate:self];
+    [_webView setPolicyDelegate:self];
 }
 
 /* -- */
@@ -76,6 +76,8 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
     }
 }
 
+/* -- */
+
 // Change the text on the window.title
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
     // Extract document's title from rendered HTML
@@ -91,7 +93,8 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
         (WebFrame *)frame decisionListener:
         (id <WebPolicyDecisionListener>)listener {
 
-    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]) {
+    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]
+            && [_btnNew state] == NSOnState) {
         [listener ignore];
         NSLog(@"Opening URL in browser:%@", [request URL]);
         [[NSWorkspace sharedWorkspace] openURL:[request URL]];
@@ -106,7 +109,8 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
         (NSString *)frameName decisionListener:
         (id <WebPolicyDecisionListener>)listener {
 
-    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]) {
+    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]
+            && [_btnNew state] == NSOnState) {
         [listener ignore];
         NSLog(@"Opening URL new window:%@", [request URL]);
         [[NSWorkspace sharedWorkspace] openURL:[request URL]];

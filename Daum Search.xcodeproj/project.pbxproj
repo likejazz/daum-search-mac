@@ -297,6 +297,7 @@
 				3EB91C541BEE76DB0032DD36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
