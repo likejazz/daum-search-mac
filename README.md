@@ -4,6 +4,10 @@
 
 <img src="https://raw.githubusercontent.com/likejazz/daum-search-mac-app/master/Screenshot.png" width="400" />
 
+# Download
+
+[Click here to download now](https://github.com/likejazz/daum-search-mac-app/releases/download/v1.1.1/Daum.Search.app.zip)
+
 # Usage
 
 - Hit `CMD + L` to focus on search box for convenient use.
