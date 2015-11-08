@@ -126,7 +126,7 @@
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="460" height="790"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <webView translatesAutoresizingMaskIntoConstraints="NO" id="7nh-VN-nV2">
                         <rect key="frame" x="0.0" y="0.0" width="460" height="747"/>
@@ -139,12 +139,12 @@
                         </connections>
                     </webView>
                     <searchField wantsLayer="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3e3-Gg-Jlj">
-                        <rect key="frame" x="91" y="755" width="220" height="22"/>
+                        <rect key="frame" x="108" y="755" width="220" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="220" id="svZ-kZ-3VH"/>
                         </constraints>
                         <animations/>
-                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsWholeSearchString="YES" id="MG8-DP-XJm">
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Daum 검색" usesSingleLineMode="YES" bezelStyle="round" sendsWholeSearchString="YES" id="MG8-DP-XJm">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -154,7 +154,7 @@
                         </connections>
                     </searchField>
                     <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3G-Fs-OWn">
-                        <rect key="frame" x="317" y="758" width="54" height="16"/>
+                        <rect key="frame" x="334" y="758" width="54" height="16"/>
                         <animations/>
                         <buttonCell key="cell" type="check" title="새 창" bezelStyle="regularSquare" imagePosition="left" inset="2" id="GIN-5b-8i3">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -163,7 +163,7 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="v3G-Fs-OWn" firstAttribute="baseline" secondItem="3e3-Gg-Jlj" secondAttribute="baseline" id="4Of-86-TBm"/>
+                    <constraint firstItem="v3G-Fs-OWn" firstAttribute="baseline" secondItem="3e3-Gg-Jlj" secondAttribute="baseline" constant="-1" id="4Of-86-TBm"/>
                     <constraint firstAttribute="trailing" secondItem="7nh-VN-nV2" secondAttribute="trailing" id="7cH-Ah-WOc"/>
                     <constraint firstAttribute="bottom" secondItem="7nh-VN-nV2" secondAttribute="bottom" id="CzO-ck-sbm"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Jpb-rt-dUF"/>

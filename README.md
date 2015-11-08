@@ -7,7 +7,7 @@
 # Usage
 
 - Hit `CMD + L` to focus on search box for convenient use.
-- If you want links to open in a OS' default browser(e.g. Chrome, Safari, Firefox) instead of the current one, click button named '새 창'.
+- If you want links to open in a OS' default browser(e.g. Chrome, Safari, Firefox) instead of the current one, click checkbox named '새 창'.
 
 # App Icon
 
