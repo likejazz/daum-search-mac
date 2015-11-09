@@ -58,8 +58,6 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
 
     // For change the text on the window.title
     [_webView setFrameLoadDelegate:self];
-    // For open URL in OS' default browser
-    [_webView setPolicyDelegate:self];
 }
 
 /* -- */
@@ -76,6 +74,13 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
     }
 }
 
+- (IBAction)newWindow:(id)sender {
+    // Extract current URL from WebView
+    NSString *currentURL = [[[[[_webView mainFrame] dataSource] request] URL] absoluteString];
+    // Open link in external default browser
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:currentURL]];
+}
+
 /* -- */
 
 // Change the text on the window.title
@@ -84,38 +89,6 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
     NSString *title = [[self webView] stringByEvaluatingJavaScriptFromString:@"document.title"];
 
     [self.window setTitle:title];
-}
-
-// Open URL in OS' default browser
-- (void)webView:(WebView *)webView decidePolicyForNavigationAction:
-        (NSDictionary *)actionInformation request:
-        (NSURLRequest *)request frame:
-        (WebFrame *)frame decisionListener:
-        (id <WebPolicyDecisionListener>)listener {
-
-    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]
-            && [_btnNew state] == NSOnState) {
-        [listener ignore];
-        NSLog(@"Opening URL in browser:%@", [request URL]);
-        [[NSWorkspace sharedWorkspace] openURL:[request URL]];
-
-    }
-    [listener use];
-}
-
-- (void)webView:(WebView *)webView decidePolicyForNewWindowAction:
-        (NSDictionary *)actionInformation request:
-        (NSURLRequest *)request newFrameName:
-        (NSString *)frameName decisionListener:
-        (id <WebPolicyDecisionListener>)listener {
-
-    if (WebNavigationTypeLinkClicked == [[actionInformation objectForKey:WebActionNavigationTypeKey] intValue]
-            && [_btnNew state] == NSOnState) {
-        [listener ignore];
-        NSLog(@"Opening URL new window:%@", [request URL]);
-        [[NSWorkspace sharedWorkspace] openURL:[request URL]];
-    }
-    [listener ignore];
 }
 
 @end

@@ -6,12 +6,12 @@
 
 # Download
 
-[Click here to download now](https://github.com/likejazz/daum-search-mac-app/releases/download/v1.1.1/Daum.Search.app.zip)
+[Click here to download now](https://github.com/likejazz/daum-search-mac-app/releases/download/v1.2/Daum.Search.app.zip)
 
 # Usage
 
 - Hit `CMD + L` to focus on search box for convenient use.
-- If you want links to open in a OS' default browser(e.g. Chrome, Safari, Firefox) instead of the current one, click checkbox named '새 창'.
+- If you want current URL to open in external default browser(e.g. Chrome, Safari, Firefox), click button named '새 창'.
 
 # App Icon
 

@@ -17,6 +17,7 @@
 @property (weak) IBOutlet NSButton *btnNew;
 
 - (IBAction)search:(id)sender;
+- (IBAction)newWindow:(id)sender;
 
 @end
 
