@@ -14,10 +14,10 @@
 
 @property (weak) IBOutlet WebView *webView;
 @property (weak) IBOutlet NSSearchField *searchField;
-@property (weak) IBOutlet NSButton *btnNew;
+@property (weak) IBOutlet NSButton *shareButton;
 
 - (IBAction)search:(id)sender;
-- (IBAction)newWindow:(id)sender;
+- (IBAction)share:(id)sender;
 
 @end
 

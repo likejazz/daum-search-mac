@@ -6,7 +6,7 @@
 
 # Download
 
-[Click here to download now](https://github.com/likejazz/daum-search-mac-app/releases/download/v1.2/Daum.Search.app.zip)
+To download the latest release, [click here](https://github.com/likejazz/daum-search-mac-app/releases/latest)
 
 # Usage
 

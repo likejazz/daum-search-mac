@@ -16,6 +16,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
                 <outlet property="searchField" destination="3e3-Gg-Jlj" id="AfJ-4p-Qm8"/>
+                <outlet property="shareButton" destination="o04-jA-vDt" id="FIO-bO-sxK"/>
                 <outlet property="webView" destination="7nh-VN-nV2" id="dWK-2E-vWa"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="8Fd-zE-LfT"/>
             </connections>
@@ -123,7 +124,7 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="0.0" y="80" width="460" height="790"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="460" height="790"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
@@ -152,23 +153,29 @@
                             <action selector="search:" target="Voe-Tx-rLC" id="kbP-1h-7UB"/>
                         </connections>
                     </searchField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dFK-fa-7zM">
-                        <rect key="frame" x="344" y="751" width="67" height="32"/>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="o04-jA-vDt">
+                        <rect key="frame" x="348" y="757" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="YTO-3g-ldE"/>
+                        </constraints>
                         <animations/>
-                        <buttonCell key="cell" type="push" title="새 창" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yrm-ly-Eez">
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSShareTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="W55-Sd-Sos">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="newWindow:" target="Voe-Tx-rLC" id="mic-md-KAb"/>
+                            <action selector="share:" target="Voe-Tx-rLC" id="q3m-kB-uBf"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="7nh-VN-nV2" secondAttribute="trailing" id="7cH-Ah-WOc"/>
                     <constraint firstAttribute="bottom" secondItem="7nh-VN-nV2" secondAttribute="bottom" id="CzO-ck-sbm"/>
+                    <constraint firstItem="o04-jA-vDt" firstAttribute="leading" secondItem="3e3-Gg-Jlj" secondAttribute="trailing" constant="8" symbolic="YES" id="H2Z-Gg-WWv"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="Jpb-rt-dUF"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="top" secondItem="3e3-Gg-Jlj" secondAttribute="bottom" constant="10" id="l5f-a4-UVH"/>
+                    <constraint firstItem="o04-jA-vDt" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="9" id="rzq-wn-3CM"/>
+                    <constraint firstItem="o04-jA-vDt" firstAttribute="bottom" secondItem="3e3-Gg-Jlj" secondAttribute="bottom" id="vh6-3H-P9V"/>
                     <constraint firstItem="3e3-Gg-Jlj" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="11" id="wIw-DA-EYS"/>
                     <constraint firstItem="7nh-VN-nV2" firstAttribute="centerX" secondItem="3e3-Gg-Jlj" secondAttribute="centerX" id="xbo-ta-xZB"/>
                 </constraints>
@@ -177,4 +184,7 @@
             <point key="canvasLocation" x="285" y="697"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSShareTemplate" width="11" height="16"/>
+    </resources>
 </document>

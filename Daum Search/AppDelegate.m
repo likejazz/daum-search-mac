@@ -74,7 +74,7 @@ NSString *_SEARCH_URL = @"https://m.search.daum.net/search?w=tot&q=";
     }
 }
 
-- (IBAction)newWindow:(id)sender {
+- (IBAction)share:(id)sender {
     // Extract current URL from WebView
     NSString *currentURL = [[[[[_webView mainFrame] dataSource] request] URL] absoluteString];
     // Open link in external default browser
